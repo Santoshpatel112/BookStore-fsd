@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOK</title>
+    <style>
+        #container {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: grid ;
+  place-items: center
+}
+
+#slider-container {
+  height: 300px;
+  width: 85vw;
+  max-width: 1400px;
+  background: #C5E8EC;
+  box-shadow: 5px 5px 8px gray inset;
+  
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+#slider-container .btn {
+  position: absolute;
+  top: calc(50% - 30px);
+  height: 30px;
+  width: 30px;
+  border-left: 8px solid pink;
+  border-top: 8px solid pink;
+}
+
+#slider-container .btn:hover {
+  transform: scale(1.2);
+}
+
+#slider-container .btn.inactive {
+  border-color: rgb(28 26 26)
+}
+
+#slider-container .btn:first-of-type {
+  transform: rotate(-45deg);
+  left: 10px
+}
+
+#slider-container .btn:last-of-type {
+  transform: rotate(135deg);
+  right: 10px;
+}
+
+#slider-container #slider {
+  display: flex;
+  width: 1000%;
+  height: 100%; 
+  transition: all .5s;
+}
+
+#slider-container #slider .slide {
+  height: 90%;
+  margin: auto 10px;
+
+  display: flex;
+  place-items: center;
+}
+
+#slider-container #slider .slide span {
+  color: white;
+  font-size: 150px;
+}
+
+@media only screen and (min-width: 1100px) {
+
+  #slider-container #slider .slide {
+    width: calc(2.5% - 20px);
+  }
+
+}
+
+@media only screen and (max-width: 1100px) {
+
+  #slider-container #slider .slide {
+    width: calc(3.3333333% - 20px);
+  }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+  #slider-container #slider .slide {
+    width: calc(5% - 20px);
+  }
+
+}
+
+@media only screen and (max-width: 550px) {
+
+  #slider-container #slider .slide {
+    width: calc(10% - 20px);
+  }
+
+}
+.slide img{
+    display: flex;
+    width: 30vw;
+    height: 30vw;
+
+}
+
+
+
+
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+    background-color: white;
+}
+
+.card-image {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.card-description {
+    color: #666;
+    margin: 8px 0;
+}
+
+.card-price {
+    font-size: 1.2em;
+    color: #28a745;
+    margin: 8px 0;
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+.product{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  padding: 5vw;
+  margin: 5vw;
+  gap: 10vw;
+
+}
+    </style>
+</head>
+<body>
+    
+      <div id="container">
+        <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ">technical</h1>
+  <div id="slider-container">
+    <span onclick="slideRight()" class="btn"></span>
+      <div id="slider">
+        <div class="slide">
+            <span><img src="https://tse1.mm.bing.net/th?id=OIP.kxUdl9oDP2fWpMl1V6n5UgHaJy&pid=Api&P=0&h=180" alt="" ></span>
+        </div>
+        <div class="slide"><span><img src="https://meyerweb.com/eric/books/css-tdg/cover-sm.jpg" alt=""></span></div>
+        <div class="slide"><span><img src="https://uploads-ssl.webflow.com/5f280c5b57d2edfcbbb057ea/6073355ab84c349e66eb3715_610iisRHspL._AC_UL960_QL65_.jpeg" alt=""><span></div>
+        <div class="slide"><span><img src="https://m.media-amazon.com/images/I/418aCg-9uaL._SY445_SX342_.jpg" alt=""></span></div>
+        <div class="slide"><span><img src="https://tse4.mm.bing.net/th?id=OIP.jGmsBgWeeiHdcbAfoXRvFwHaLH&pid=Api&P=0&h=180" alt=""></span></div>
+        <div class="slide"><span><img src="https://meyerweb.com/eric/books/css-tdg/cover-sm.jpg" alt=""></span></div>
+        <div class="slide"><span><img src="https://tse3.mm.bing.net/th?id=OIP.fHwezjRSlNL9N9YsnDpdmQHaJz&pid=Api&P=0&h=180" alt=""></span></div>
+        <div class="slide"><span><img src="https://tse1.mm.bing.net/th?id=OIP.lUolv6COs0obgyrBuAKe1QAAAA&pid=Api&P=0&h=180" alt=""></span></div>
+        <div class="slide"><span><img src="https://tse2.mm.bing.net/th?id=OIP.uSpQ9y_vR7Dt-3EBXpgvAAAAAA&pid=Api&P=0&h=180" alt=""></span></div>
+        <div class="slide"><span><img src="https://tse2.mm.bing.net/th?id=OIP.wlKM4sf4ZXMItVNRxKqsUAAAAA&pid=Api&P=0&h=180" alt=""></span></div>
+    </div>
+    <span onclick="slideLeft()" class="btn"></span>
+  </div>
+</div>
+
+<div class="product">
+<div class="card">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.kpXMbS9NiTa5DtviCiHJoAHaJQ&pid=Api&P=0&h=180" alt="Product Image" class="card-image">
+        <div class="card-content">
+            <h2 class="card-title">Engineering Physics</h2>
+            <p class="card-description">This is a brief description of the product.</p>
+            <p class="card-price">899 ₹ </p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.dX2NXLq8rP3uZe4SpinJCwAAAA&pid=Api&P=0&h=180" alt="Product Image" class="card-image">
+        <div class="card-content">
+            <h2 class="card-title">Engineering Chemistry</h2>
+            <p class="card-description">This is a brief description of the product.</p>
+            <p class="card-price">1200 ₹  </p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+  </div>
+  <div class="product">
+<div class="card">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.HJIy3GuHYIbvMe41OvrJqgHaKc&pid=Api&P=0&h=180" alt="Product Image" class="card-image">
+        <div class="card-content">
+            <h2 class="card-title">Engineering  Mathmatics</h2>
+            <p class="card-description">This is a brief description of the product.</p>
+            <p class="card-price">1200 ₹  </p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/I/51b+Omh2dkL._SL500_.jpg" alt="Product Image" class="card-image">
+        <div class="card-content">
+            <h2 class="card-title">Engineering Electrinics</h2>
+            <p class="card-description">This is a brief description of the product.</p>
+            <p class="card-price">1800 ₹ </p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+  </div>
+  <div class="product">
+<div class="card">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.inQyZgzo7GpXhVUWGZ83WAHaJK&pid=Api&P=0&h=180" alt="Product Image" class="card-image">
+        <div class="card-content">
+            <h2 class="card-title">Mechanical</h2>
+            <p class="card-description">This is a brief description of the product.</p>
+            <p class="card-price">899 ₹</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.PGfS2eH9mDngaInJvZkWSAAAAA&pid=Api&P=0&h=180" alt="Product Image" class="card-image">
+        <div class="card-content">
+            <h2 class="card-title">Engineering Drawing</h2>
+            <p class="card-description">This is a brief description of the product.</p>
+            <p class="card-price">599 ₹</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+  </div>
+  <div class="product">
+<div class="card">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.mj5RzxG2MWV_VsLyj4x6NwHaLK&pid=Api&P=0&h=180" alt="Product Image" class="card-image">
+        <div class="card-content">
+            <h2 class="card-title">Rich dad Poor dad</h2>
+            <p class="card-description">This is a brief description of the product.</p>
+            <p class="card-price">$19.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.QCYnDt585C_9X5csv-JLQwHaLG&pid=Api&P=0&h=180" alt="Product Image" class="card-image">
+        <div class="card-content">
+            <h2 class="card-title">Bussiness</h2>
+            <p class="card-description">This is a brief description of the product.</p>
+            <p class="card-price">$19.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+  </div>  
+</body>
+<script>
+    var container = document.getElementById('container')
+var slider = document.getElementById('slider');
+var slides = document.getElementsByClassName('slide').length;
+var buttons = document.getElementsByClassName('btn');
+
+
+var currentPosition = 0;
+var currentMargin = 0;
+var slidesPerPage = 0;
+var slidesCount = slides - slidesPerPage;
+var containerWidth = container.offsetWidth;
+var prevKeyActive = false;
+var nextKeyActive = true;
+
+window.addEventListener("resize", checkWidth);
+
+function checkWidth() {
+    containerWidth = container.offsetWidth;
+    setParams(containerWidth);
+}
+
+function setParams(w) {
+    if (w < 551) {
+        slidesPerPage = 1;
+    } else {
+        if (w < 901) {
+            slidesPerPage = 2;
+        } else {
+            if (w < 1101) {
+                slidesPerPage = 3;
+            } else {
+                slidesPerPage = 4;
+            }
+        }
+    }
+    slidesCount = slides - slidesPerPage;
+    if (currentPosition > slidesCount) {
+        currentPosition -= slidesPerPage;
+    };
+    currentMargin = - currentPosition * (100 / slidesPerPage);
+    slider.style.marginLeft = currentMargin + '%';
+    if (currentPosition > 0) {
+        buttons[0].classList.remove('inactive');
+    }
+    if (currentPosition < slidesCount) {
+        buttons[1].classList.remove('inactive');
+    }
+    if (currentPosition >= slidesCount) {
+        buttons[1].classList.add('inactive');
+    }
+}
+
+setParams();
+
+function slideRight() {
+    if (currentPosition != 0) {
+        slider.style.marginLeft = currentMargin + (100 / slidesPerPage) + '%';
+        currentMargin += (100 / slidesPerPage);
+        currentPosition--;
+    };
+    if (currentPosition === 0) {
+        buttons[0].classList.add('inactive');
+    }
+    if (currentPosition < slidesCount) {
+        buttons[1].classList.remove('inactive');
+    }
+};
+
+function slideLeft() {
+    if (currentPosition != slidesCount) {
+        slider.style.marginLeft = currentMargin - (100 / slidesPerPage) + '%';
+        currentMargin -= (100 / slidesPerPage);
+        currentPosition++;
+    };
+    if (currentPosition == slidesCount) {
+        buttons[1].classList.add('inactive');
+    }
+    if (currentPosition > 0) {
+        buttons[0].classList.remove('inactive');
+    }
+};
+</script>
+</html>
